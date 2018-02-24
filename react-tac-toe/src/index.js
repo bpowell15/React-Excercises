@@ -81,12 +81,14 @@ class Board extends React.Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
+        <button className="reset" onClick={()=>this.setState({squares: Array(9).fill(null)})}>Reset</button>
       </div>
     );
   }
 }
 
 class Game extends React.Component {
+
   render() {
     return (
       <div className="game">

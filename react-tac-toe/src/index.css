@@ -1,6 +1,7 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  background-color: yellow;
 }
 
 ol, ul {
@@ -13,23 +14,45 @@ ol, ul {
   display: table;
 }
 
+.reset {
+  background-color: purple;
+  color: orange;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  background-color: orange;
+  color: purple;
+  cursor: pointer;
+}
+
 .status {
   margin-bottom: 10px;
+  text-align: center;
+  font-size: 48px;
+  color: purple
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background-color: orange;
+  border: 3px solid purple;
   float: left;
-  font-size: 24px;
+  font-size: 96px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 200px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 200px;
+  color: white;
+  cursor: crosshair;
+}
+
+.square:hover {
+  background-color: yellow;
+  color: orange
 }
 
 .square:focus {
@@ -42,6 +65,7 @@ ol, ul {
 
 .game {
   display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 
