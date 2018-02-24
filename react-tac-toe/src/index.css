@@ -1,11 +1,19 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
-  background-color: yellow;
+  background-image: url("mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+* {
+  margin: 10px;
 }
 
 ol, ul {
-  padding-left: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .board-row:after {
@@ -18,6 +26,8 @@ ol, ul {
   background-color: purple;
   color: orange;
   border-radius: 5px;
+  width: 100%;
+  /* margin-top: 10px; */
 }
 
 .reset:hover {
@@ -26,18 +36,29 @@ ol, ul {
   cursor: pointer;
 }
 
-.status {
+ol {
+  list-style: none;
+}
+
+.title {
   margin-bottom: 10px;
   text-align: center;
   font-size: 48px;
   color: purple
 }
 
+.status{
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: purple
+}
+
 .square {
-  background-color: orange;
+  background-color: rgba(255,140,0, .5);
   border: 3px solid purple;
   float: left;
-  font-size: 96px;
+  font-size: 225px;
   font-weight: bold;
   line-height: 34px;
   height: 200px;
@@ -48,11 +69,12 @@ ol, ul {
   width: 200px;
   color: white;
   cursor: crosshair;
+  box-shadow: 10px 10px 30px purple;
 }
 
 .square:hover {
-  background-color: yellow;
-  color: orange
+  background-color: rgba(255,215,0, .5);
+  color: orange;
 }
 
 .square:focus {
@@ -71,4 +93,7 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
