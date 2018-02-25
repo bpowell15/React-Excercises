@@ -1,3 +1,5 @@
+
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
@@ -9,6 +11,7 @@ body {
 
 * {
   margin: 10px;
+  outline: none;
 }
 
 ol, ul {
@@ -23,16 +26,19 @@ ol, ul {
 }
 
 .reset {
-  background-color: purple;
-  color: orange;
+  background-color: #4f6282;
+  color: rgb(242,64,2);
   border-radius: 5px;
   width: 100%;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
   /* margin-top: 10px; */
 }
 
 .reset:hover {
-  background-color: orange;
-  color: purple;
+  background-color: rgb(244, 168, 111);
+  color: #4f6282;
   cursor: pointer;
 }
 
@@ -44,19 +50,19 @@ ol {
   margin-bottom: 10px;
   text-align: center;
   font-size: 48px;
-  color: purple
+  color: #fff;
 }
 
 .status{
   margin-bottom: 10px;
   text-align: center;
   font-size: 24px;
-  color: purple
+  color: #fff;
 }
 
 .square {
-  background-color: rgba(255,140,0, .5);
-  border: 3px solid purple;
+  background-color: rgba(242,64,2, .5);
+  border: 3px solid #4f6282;
   float: left;
   font-size: 225px;
   font-weight: bold;
@@ -69,12 +75,12 @@ ol {
   width: 200px;
   color: white;
   cursor: crosshair;
-  box-shadow: 10px 10px 30px purple;
+  box-shadow: -5px 5px 3px rgba(79, 98, 130, .5);
 }
 
 .square:hover {
-  background-color: rgba(255,215,0, .5);
-  color: orange;
+  background-color: rgba(242, 171, 114, .5);
+  color: rgb(242,64,2);
 }
 
 .square:focus {
