@@ -47,13 +47,14 @@ body{
 }
 
 .calculator {
+  position: absolute;
+  left: 300px;
+  top: 10px;
   width: 240px;
   padding-top: 20px;
   background-color: #ecf2f9;
-  box-shadow: 4px 5px 5px grey,  inset 1px 1px 44px #7cbfffbd;;
+  box-shadow: 4px 5px 5px grey,  inset 1px 1px 44px #0b7debbd;;
   border-radius: 10px;
-  margin-top: 125px;
-  margin-left: 200px;
 }
 
 .calculator:hover {
@@ -64,15 +65,51 @@ body{
   cursor: grabbing;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls:hover {
+  cursor: grab;
+}
+
+.controls:active{
+  cursor: grabbing;;
+}
+
+.new{
+  max-width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: sans-serif;
+}
+
+.new:hover {
+  color: rgb(191, 27, 27);
+  cursor: pointer;
+}
+
 .note {
   min-width: 250px;
   min-height: 200px;
-  padding: 20px;
+  padding: 5px;
   background: yellow;
   resize: none;
   box-shadow: 2px 4px 5px grey;
   border: none;
 }
+
+.note-component {
+  position: absolute;
+  background-color: yellow;
+  max-width: fit-content;
+}
+
+.note-component:hover {
+
+}
+
 
 .screen {
   color: #76b074;
