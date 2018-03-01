@@ -64,6 +64,16 @@ body{
   cursor: grabbing;
 }
 
+.note {
+  min-width: 250px;
+  min-height: 200px;
+  padding: 20px;
+  background: yellow;
+  resize: none;
+  box-shadow: 2px 4px 5px grey;
+  border: none;
+}
+
 .screen {
   color: #76b074;
   min-height: 41px;

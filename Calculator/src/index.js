@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Draggable from 'react-draggable';
 import './index.css';
 
-const VALUES = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+const VALUES = [ 7, 8, 9, 4, 5, 6, 1, 2, 3, 0]
 const OPERATORS = ["+", "-", "x", "/", "="]
 
 class Calculator extends React.Component {
@@ -18,20 +18,51 @@ class Calculator extends React.Component {
     this.handleNumClick = this.handleNumClick.bind(this);
     this.handleClear = this.handleClear.bind(this);
     this.handlePower = this.handlePower.bind(this);
+    this.handleOpClick = this.handleOpClick.bind(this);
   }
   
   handleNumClick(e){
     if (this.state.power === "off") {
       return;
     }
+  
     
-    const symbols = ["x", "/", "+", "-", "=",]
-    
-    if (this.state.value === "0"  && !isNaN(parseInt(e.target.innerHTML))) {
+    if (this.state.value === "0") {
       this.setState({value: e.target.innerHTML})
-    } else if (!isNaN(parseInt(e.target.innerHTML))) {
+    } else if (this.state.operator === "") {
       this.setState({value: this.state.value + e.target.innerHTML})
-    } 
+    } else (
+      this.setState({
+        value: e.target.innerHTML,
+        storedValue: this.state.value
+      })
+    )
+  }
+  
+  handleOpClick(e){
+    let value; 
+    if (e.target.innerHTML !== '=' && this.state.operator === "" ) {
+      this.setState({
+        operator: e.target.innerHTML
+      })
+    } else {
+    
+      if (e.target.innerHTML === '+') {
+        value = add(this.state.value, this.state.storedValue)
+      } else if (e.target.innerHTML === '-') {
+        value = subtract(this.state.storedValue, this.state.value)
+      } else if (e.target.innerHTML === 'x') {
+        value = multiply(this.state.value, this.state.storedValue)
+      } else {
+        value = divide(this.state.storedValue, this.state.value)
+      }
+    }
+    
+    this.setState({
+      value, 
+      storedValue: "",
+      operator: ""
+    })
   }
   
   handleClear(){
@@ -69,10 +100,11 @@ class Calculator extends React.Component {
     } 
     return(
       <div>
+        <Note />
         <Draggable>
         <div className="calculator">
           <div className={`screen ${power}`}>{this.state.value}</div>
-          <Buttons handlePower={this.handlePower} power={this.state.power} handleClear={this.handleClear} handleNumClick={this.handleNumClick} /> 
+          <Buttons handlePower={this.handlePower} power={this.state.power} handleClear={this.handleClear} handleOpClick={this.handleOpClick} handleNumClick={this.handleNumClick} /> 
         </div>
         </Draggable>
         <div className="title">Calculator: A Basic React Review - Brice Powell <i>Try Clicking and Dragging!</i></div>
@@ -133,6 +165,28 @@ const multiply = (a, b)=>{
 const divide = (a, b)=>{
   return a / b
 }
+
+
+class Note extends React.Component {
+  constructor(props){
+    super(props) 
+    this.state = {
+      note: "Add a note",
+    }
+  }
+  
+  
+  render(){
+    return(
+    <textarea className="note" onChange={(e)=>{
+          this.setState({note: e.currentTarget.value})
+        }} 
+      value={this.state.note}>
+    </textarea> 
+    )
+  }
+}
+  
 
 // ========================================
 
