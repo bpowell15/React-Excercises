@@ -31,6 +31,9 @@ class Desk extends React.Component {
 
   removeNoteOnClick(e){
     e.target.parentElement.parentElement.remove();
+    this.setState({
+      notes: this.state.notes - 1
+    });
   }
 
   addNoteOnClick(){
@@ -67,10 +70,10 @@ class Desk extends React.Component {
       this.setState({
         operator: e.target.innerHTML
       });
-      debugger
+
       value=this.state.value;
     } else {
-      debugger
+
       if (e.target.innerHTML === '+' || this.state.operator === '+') {
         value = Util.add(parseFloat(this.state.value),
                     parseFloat(this.state.storedValue));
@@ -124,6 +127,7 @@ class Desk extends React.Component {
   render(){
     let power = '';
     let notes = [];
+    let newNote = <div></div>;
     if (this.state.power === 'off') {
       power = 'off';
     }
@@ -139,10 +143,15 @@ class Desk extends React.Component {
       notes.push(note);
     }
 
+    if(this.state.notes === 0) {
+      newNote = <div className="new-note" onClick={this.addNoteOnClick}>New Note</div>;
+    }
+
+
 
     return(
       <div className="main">
-        <div className="new-note" onClick={this.addNoteOnClick}>New Note</div>
+        {newNote}
         {notes}
         <Draggable>
           <div className="calculator">
@@ -161,7 +170,7 @@ class Desk extends React.Component {
           </div>
         </Draggable>
         <div className="title">
-          Calculator: A Basic React Review - Brice Powell
+          Desk: A Basic React Review - Brice Powell
           <i>Try Clicking and Dragging!</i>
         </div>
       </div>

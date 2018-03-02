@@ -25,7 +25,6 @@ class Weather  extends React.Component {
  }
 
  pollWeather(location){
-   console.log(location);
    let lat = location.coords.latitude;
    let lon = location.coords.longitude;
    let url = 'http://api.openweathermap.org/data/2.5/weather?';
@@ -55,7 +54,6 @@ class Weather  extends React.Component {
    let content = <div></div>;
    if (this.state.weather) {
      let weather = this.state.weather;
-     console.log(weather)
      let url = `http://openweathermap.org/img/w/${weather.weather[1].icon}.png`;
      let temp = (weather.main.temp - 273.15) * 1.8 + 32;
      content = <div>
