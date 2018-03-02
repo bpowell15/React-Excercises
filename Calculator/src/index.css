@@ -20,6 +20,21 @@ body{
   background-size: cover;
 }
 
+textarea {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+}
+
+ul {
+  text-align: center;
+}
+
+/* li {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+} */
 
 
 .button {
@@ -78,6 +93,12 @@ body{
   cursor: grabbing;;
 }
 
+.image{
+  float: right;
+  margin-top: -58px;
+  padding-right: 20px;
+}
+
 .new{
   max-width: fit-content;
   padding-left: 5px;
@@ -87,6 +108,15 @@ body{
 
 .new:hover {
   color: rgb(191, 27, 27);
+  cursor: pointer;
+}
+
+.new-note {
+  color: #8a5118;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.new-note:hover {
   cursor: pointer;
 }
 
@@ -105,11 +135,6 @@ body{
   background-color: yellow;
   max-width: fit-content;
 }
-
-.note-component:hover {
-
-}
-
 
 .screen {
   color: #76b074;
@@ -138,4 +163,43 @@ body{
   left: 10px;
   color: #8a5118;
   font-family: 'Orbitron', sans-serif;
+}
+
+
+.weather{
+  font-family: 'Hammersmith One', sans-serif;
+  background-color: white;
+  padding: 5px;
+  border: 5px solid rgb(18, 16, 185);
+  border-radius: 5px;
+  width: 260px;
+  height: 214px;
+  box-shadow: 4px 5px 5px rgba(18, 16, 185, 0.53);
+}
+
+.weather:hover {
+  cursor: grab;
+}
+.weather:active {
+  cursor: grabbing;
+}
+
+.weather p{
+  margin: 8px;
+}
+
+.weather-drag {
+  height: -webkit-fill-avaible;
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: center;
+}
+
+.loading{
+   margin: auto;
 }
