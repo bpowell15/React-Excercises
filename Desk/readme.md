@@ -1,7 +1,7 @@
 # Desk
 ![alt text](./public/Desk.gif "Logo Title Text 1")
 ### A collection of widgets built purely with React
-All made Draggable using the react-draggle npm package
+All made Draggable using the react-draggable npm package
 #### Notepad
   Allows the user to create notes on as many sticky notes as the please.
 #### Calculator
