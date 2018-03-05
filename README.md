@@ -7,3 +7,5 @@ A collection of basic react excericises to solidify my knowledge of the basics o
 ### [Desk](https://github.com/bpowell15/React-Excercises/tree/master/Desk) 
 - A collection of pure React Component Widgets 
 - Sticky Notes, Calculator, Weather Feed
+### [Social Card Component](https:/github.com/bpowell15/React-Excercises/tree/master/Social-Card-Component)
+- In progress
