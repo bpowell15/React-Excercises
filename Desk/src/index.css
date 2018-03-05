@@ -78,6 +78,7 @@ ul {
 
 .calculator:active {
   cursor: grabbing;
+  z-index: 1000;
 }
 
 .controls {
@@ -90,7 +91,8 @@ ul {
 }
 
 .controls:active{
-  cursor: grabbing;;
+  cursor: grabbing;
+  z-index: 1000;
 }
 
 .image{
@@ -182,6 +184,7 @@ ul {
 }
 .weather:active {
   cursor: grabbing;
+  z-index: 1000;
 }
 
 .weather p{

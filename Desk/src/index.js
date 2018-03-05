@@ -30,6 +30,7 @@ class Desk extends React.Component {
   }
 
   removeNoteOnClick(e){
+    debugger
     e.target.parentElement.parentElement.remove();
     this.setState({
       notes: this.state.notes - 1
@@ -37,6 +38,7 @@ class Desk extends React.Component {
   }
 
   addNoteOnClick(){
+    debugger
     this.setState({
       notes: this.state.notes + 1
     });

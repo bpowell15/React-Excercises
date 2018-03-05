@@ -54,11 +54,11 @@ class Weather  extends React.Component {
    let content = <div></div>;
    if (this.state.weather) {
      let weather = this.state.weather;
-     let url = `http://openweathermap.org/img/w/${weather.weather[1].icon}.png`;
+     let url = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
      let temp = (weather.main.temp - 273.15) * 1.8 + 32;
      content = <div>
                  <p style={{fontSize: "36px"}}>{temp.toFixed(1)} <span style={{fontSize:"20px"}}>&#8457;</span></p><img className="image" src={url}></img>
-                 <p style={{marginTop: "-21px", borderBottom: "1px solid black"}}>{weather.weather[1].description}</p>
+                 <p style={{marginTop: "-21px", borderBottom: "1px solid black"}}>{weather.weather[0].description}</p>
                  <ul className="weather-details" style={{display: "flex", justifyContent: "center"}}>
                    <li style={{padding: "5px"}}>{weather.clouds.all}%<br /> Cloud Coverage</li>
                    <li style={{padding: "5px"}}>{weather.main.humidity}%<br /> Humidity</li>
