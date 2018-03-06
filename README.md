@@ -8,4 +8,4 @@ A collection of basic react excericises to solidify my knowledge of the basics o
 - A collection of pure React Component Widgets 
 - Sticky Notes, Calculator, Weather Feed
 ### [Social Card Component](https://github.com/bpowell15/React-Excercises/tree/master/social-card)
-- In progress
+- A basic React component meant to mimic social cards that are popular on many sites these days
