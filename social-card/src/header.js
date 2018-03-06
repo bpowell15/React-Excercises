@@ -4,7 +4,9 @@ class Header extends React.Component {
 
   image(){
     const image = {
-      borderRadius: "50%"
+      borderRadius: "50px",
+      height: "50px",
+      width: "50px"
     };
     return image;
   }
@@ -24,8 +26,8 @@ class Header extends React.Component {
       <div style={this.description()}>
         <h1 style={{fontSize: "14px", margin: "2px"}}>{this.props.state.poster.title}<span>@{this.props.state.poster.title}</span></h1>
         <p style={{fontSize: "12px", margin: "2px"}}>{this.props.state.headline}</p>
-        <p style={{fontSize: "12px", margin: "2px"}}>{this.props.state.author}</p>
-        <p style={{fontSize: "12px", margin: "2px"}}>{this.props.state.createdAt}</p>
+        <p style={{fontSize: "12px", margin: "2px"}}><b>{this.props.state.author}</b> {this.props.state.createdAt}</p>
+        {/* <p style={{fontSize: "12px", margin: "2px"}}>{this.props.state.createdAt}</p> */}
       </div>
       </div>
     );

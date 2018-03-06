@@ -17,11 +17,13 @@ class Main extends React.Component {
 
   render(){
     return (
-      <div style={this.main()}>
-        <Image />
-        <Description state={this.props.state} />
-        <Author author={this.props.state.author} image={this.props.state.authorImg}  />
-      </div>
+      <a href="https://www.cruisingworld.com/learn-to-sail-101">
+        <div style={this.main()}>
+          <Image />
+          <Description state={this.props.state} />
+          <Author author={this.props.state.author} image={this.props.state.authorImg}  />
+        </div>
+      </a>
     );
   }
 }

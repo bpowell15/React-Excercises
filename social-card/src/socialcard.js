@@ -22,7 +22,7 @@ class SocialCard extends React.Component {
     const card = {
       borderTop: "1px solid rgb(223, 223, 223)",
       borderBottom: "1px solid rgb(223, 223, 223)",
-      maxWidth: "550px"
+      maxWidth: "600px"
     };
     return card;
   }

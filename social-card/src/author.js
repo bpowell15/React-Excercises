@@ -19,10 +19,12 @@ class Author extends React.Component {
 
   render(){
     return(
-      <div style={this.author()}>
-        <h3>{this.props.author}</h3>
-        <img style={{borderRadius: "5px"}} src="https://loremflickr.com/50/50" />
-      </div>
+      <a href="https://loremflickr.com/500/334">
+        <div style={this.author()}>
+          <h3 style={{color: "white"}}>{this.props.author}</h3>
+          <img style={{borderRadius: "2px"}} src="https://loremflickr.com/50/50" />
+        </div>
+      </a>
     );
   }
 }
