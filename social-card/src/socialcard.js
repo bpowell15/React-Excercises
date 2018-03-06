@@ -9,7 +9,7 @@ const STATE = {
   author: 'Popeye',
   description: 'Wanna learn to sail? Learn from the best, dont forget to bring your spinach!',
   link: "bricepowell.com",
-  author_img: 'face.jpg',
+  authorImg: 'face.jpg',
   likes: 100,
   shares: 52,
   comments: {1: 'Cool story bro', 2: 'really great article'},
