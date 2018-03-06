@@ -66,7 +66,7 @@ class Footer extends React.Component {
       commentModal = <CommentModal addComment={this.addComment}/>;
     }
 
-    if (this.state.sharedModal && !this.state.commentModal) {
+    if (this.state.shareModal && !this.state.commentModal) {
       sharedModal = <ShareModal addShare={this.addShare} />;
     }
 

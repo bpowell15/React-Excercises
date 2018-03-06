@@ -5,8 +5,8 @@ class CommentModal extends React.Component {
   modal(){
     const modal = {
       position: "absolute",
-      top: "150px",
-      left: "200px",
+      top: "200px",
+      left: "275px",
       backgroundColor: "white",
       padding: "20px",
       borderRadius: "2px"
