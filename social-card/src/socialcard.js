@@ -17,16 +17,23 @@ const STATE = {
 };
 
 class SocialCard extends React.Component {
-  constructor(){
-    super();
+
+  card(){
+    const card = {
+      borderTop: "1px solid rgb(223, 223, 223)",
+      borderBottom: "1px solid rgb(223, 223, 223)",
+      maxWidth: "550px"
+    };
+    return card;
   }
+
 
   render(){
     return(
-      <div>
+      <div style={this.card()}>
         <Header state={STATE} />
-      <Main state={STATE} />
-      <Footer state={STATE} />
+        <Main  state={STATE} />
+        <Footer state={STATE} />
       </div>
     );
   }

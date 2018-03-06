@@ -7,9 +7,8 @@ class Footer extends React.Component {
   render(){
     return (
       <div>
-        <ul>
+        <ul style={{listStyle: "none", display: "flex", width: "660px", justifyContent: "space-around"}}>
           <li>
-            <img></img>
             {this.props.state.likes}
           </li>
           <li>
